@@ -1,7 +1,5 @@
 #snake, classic arcade game.
 
-#snake, classic arcade game.
-
 from random import randrange, choice
 from turtle import *
 
