@@ -2,6 +2,7 @@
 
 #snake, classic arcade game.
 
+import random
 from random import randrange, choice
 from turtle import *
 
@@ -10,7 +11,12 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+colorSelection = ['blue', 'orange', 'green', 'violet', 'turquoise']
+snake_color = random.choice(colorSelection)
+food_color = random.choice(colorSelection)
 
+while snake_color == food_color:
+    snake_color = random.choice(colorSelection)
 
 def change(x, y):
     """Change snake direction."""
@@ -59,9 +65,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, snake_color)
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, food_color)
     update()
     ontimer(move, 100)
 
