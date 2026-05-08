@@ -1,8 +1,11 @@
 #snake, classic arcade game.
 
+<<<<<<< HEAD
 #snake, classic arcade game.
 
 import random
+=======
+>>>>>>> upstream/main
 from random import randrange, choice
 from turtle import *
 
